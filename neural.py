@@ -1,13 +1,17 @@
 import numpy as np
+import sys
 
 X = np.array([ [0,0,1],[0,1,1],[1,0,1],[1,1,1] ])
 y = np.array([[0,1,1,0]]).T
 syn0 = 2*np.random.random((3,5)) - 1
 syn1 = 2*np.random.random((5,1)) - 1
+np.save('./syn0', syn0)
+np.save('./syn1', syn1)
 print "x" + str(X)
 print "y" + str(y)
 print "syn0" + str(syn0)
 print "syn1" + str(syn1)
+sys.exit()
 #os.system("""bash -c 'read -s -n 1 -p "Press any key to continue..."'""")
 #for j in xrange(6000000):
 l2_error = 1
